@@ -6,7 +6,8 @@ internal class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
-        // Setting up WebHost to use my own HTTPS certificate specified at the path indicated by the environment variable --------------------------
+        // Disclaimer: I should have probably put the different paths directly in appsettings and appsettings.development but whatever, I learned a lot
+        // Setting up WebHost to use my own HTTPS certificate specified at the path indicated by the environment variable ---------------------------------
         string? certFolderPath = Environment.GetEnvironmentVariable("Dr3EmUr_Server_SSLCertificate_Path");
 
         if (certFolderPath == null)
@@ -30,7 +31,7 @@ internal class Program
             });
         });
 
-        // End of HTTPS setup -------------------------------------------------------------------------------------------------------------------------
+        // End of HTTPS setup --------------------------------------------------------------------------------------------------------------------------------
 
         builder.Services.AddControllers();
         builder.Services.AddHttpsRedirection((options)=>{
