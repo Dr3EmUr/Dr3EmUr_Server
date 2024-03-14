@@ -49,7 +49,7 @@ function AboutButton()
     return (
         <>
             <div class="CTA-button about-button">
-                <a class=" w-full text-center" href = ".">Services</a>
+                <a class=" w-full text-center" href = ".">About</a>
             </div>
         </>
     )
