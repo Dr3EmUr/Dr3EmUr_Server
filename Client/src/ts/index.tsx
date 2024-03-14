@@ -1,5 +1,6 @@
 import { render } from "solid-js/web"
+import App from "./Pages/App";
 
 const rootElem = document.getElementById("solidRoot")
 
-render(() => <div class = "text-center bg-red-500">hello from SolidJS!</div>,rootElem);
+render(() => <App />,rootElem);
