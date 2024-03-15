@@ -24,7 +24,11 @@ export function VisualSeparator(props: { vertical: boolean })
             <div style={
                 `height:${separatorHeight};
                 width:${separatorWidth};
-                background-image: linear-gradient(to ${fadeDirection}, rgb(0,0,0,0) 0%, rgb(255,255,255,100%) 50%, rgb(0,0,0,0) 100%);`} class="visual-separator" />
+                background-image: linear-gradient(
+                    to ${fadeDirection}, 
+                        rgb(0,0,0,0) 0%,
+                        rgb(255,255,255,100%) 50%,
+                        rgb(0,0,0,0) 100%);`} />
         </>
     )
 }

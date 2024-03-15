@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-body, html, #solidRoot
+body, html
 {
     height : 100%
 }

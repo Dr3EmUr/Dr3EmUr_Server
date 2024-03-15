@@ -1,24 +1,15 @@
 import { VisualSeparator } from "./CommonElements";
 import Navbar from "./Navbar";
 
-export default function()
+export default function Hero()
 {
     return (
         <>
-            <Navbar />
-            <Hero />
-        </>
-    )
-}
-
-function Hero()
-{
-    return (
-        <>
-            <div class=" absolute m-auto mt-[250px] w-fit inset-0 flex-col items-center justify-center">
-                <div class="text-white font-[Jaldi] font-bold text-[4rem]">
+            
+            <div class=" mx-auto my-[10%] w-fit flex-col items-center justify-center select-none">
+                <h1 class="text-white font-[Jaldi] font-bold text-[4rem]">
                     Welcome to my server
-                </div>
+                </h1>
                 <VisualSeparator vertical={false} />
 
                 <div class = "flex mt-32 items-center px-14 justify-around gap-10">
