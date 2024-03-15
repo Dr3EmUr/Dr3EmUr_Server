@@ -17,13 +17,12 @@ export default function App()
             
             <svg width="100%" height="175">
 
-            <rect
+                <rect
                     y = "150px"
                     width={"100%"}
                     height={"25px"}
                     fill={grayColor}
-                    
-                ></rect>
+                />
 
                 <path
                     d="
@@ -39,7 +38,7 @@ export default function App()
                     
                         "
                     fill={grayColor}
-                ></path>
+                />
 
                 <path
                     d="
@@ -55,17 +54,15 @@ export default function App()
                     
                         "
                     fill="white"
-                    style={"transform:translate(-30px,25px)"}
-                ></path>
-                
-                
+                    style={"transform:translate(-27px,25px)"}
+                />   
             </svg>
 
                 
 
                 
 
-            <section id = "contentSection" class=" text-white">
+            <section id = "contentSection" class=" text-white bg-white h-96">
                 
             </section>
 

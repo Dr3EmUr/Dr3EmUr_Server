@@ -10,7 +10,7 @@ export default function Hero()
                 <h1 class="text-white font-[Jaldi] font-bold text-[4rem]">
                     Welcome to my server
                 </h1>
-                <VisualSeparator vertical={false} />
+                <VisualSeparator />
 
                 <div class = "flex mt-32 items-center px-14 justify-around gap-10">
                     <ServicesButton />

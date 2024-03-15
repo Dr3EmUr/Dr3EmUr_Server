@@ -1,34 +1,28 @@
-export function VisualSeparator(props: { vertical: boolean })
+export function VisualSeparator()
 {
-    const separatorSize = "4px"
-
-    let separatorWidth : string;
-    let separatorHeight : string;
-    let fadeDirection : string;
-
-    if (props.vertical == true)
-    {
-        separatorWidth = separatorSize;
-        separatorHeight = "100%";
-        fadeDirection = "bottom"
-    }
-    else
-    {
-        separatorWidth = "100%";
-        separatorHeight = separatorSize;
-        fadeDirection = "right"
-    }
+    const separatorHeight = "4px"
 
     return (
         <>
             <div style={
-                `height:${separatorHeight};
-                width:${separatorWidth};
+                `height: ${separatorHeight};
+                width: 100%;
                 background-image: linear-gradient(
-                    to ${fadeDirection}, 
+                    to right, 
                         rgb(0,0,0,0) 0%,
                         rgb(255,255,255,100%) 50%,
                         rgb(0,0,0,0) 100%);`} />
+        </>
+    )
+}
+
+export function SideTextDeco()
+{
+    const width = "3px"
+
+    return (
+        <>
+            <div  />
         </>
     )
 }
