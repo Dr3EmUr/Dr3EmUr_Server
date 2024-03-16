@@ -22,7 +22,14 @@ export function SideTextDeco()
 
     return (
         <>
-            <div  />
+            <div style={
+                `margin-right: 15px;
+                width: ${width};
+                background-image: linear-gradient(
+                    to bottom, 
+                        rgba(0,0,0,100%) 0%,
+                        rgba(0,0,0,100%) 50%,
+                        rgba(0,0,0,0) 100%);`} />
         </>
     )
 }
