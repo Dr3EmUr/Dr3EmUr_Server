@@ -7,9 +7,14 @@
     box-sizing: border-box;
 }
 
-body, html
+html
 {
-    height : 100%
+    height : fit-content;
+}
+
+body
+{
+    height: 100%;
 }
 
 .content-section h1, .content-section h2
@@ -17,7 +22,7 @@ body, html
     font-weight: bold;
 }
 
-.content-section h2
+.about-me > h2
 {
     margin-top: 25px;
     margin-bottom: 5px;

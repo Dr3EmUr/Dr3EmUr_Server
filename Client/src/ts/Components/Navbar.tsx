@@ -2,7 +2,7 @@ export default function Navbar()
 {
     return (
         <>
-            <div class = "flex flex-col">
+            <div class = "flex flex-col sticky top-0 bg-black z-10">
                 <nav class="px-7 py-4 flex gap-3 items-center text-white select-none">
                     <a href = "" class=" font-[Inika] font-bold text-2xl">Dr3EmUr's Server</a>
                     <NavbarElement text="Services" link="" />
