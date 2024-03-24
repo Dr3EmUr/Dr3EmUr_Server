@@ -4,7 +4,7 @@ export default function waves(props : {isUpsideDown? : boolean})
     const grayColor = "rgb(217,217,217)"
     
     return <>
-    <svg width="100%" height="175" style={props.isUpsideDown ? "transform : scaleY(-1) scaleX(-1);" : ""}>
+    <svg width="100%" height="175" style={props.isUpsideDown ? "transform : scaleY(-1) scaleX(-1);" : ""} class = "max-md:hidden">
 
         <rect
             y = "150px"

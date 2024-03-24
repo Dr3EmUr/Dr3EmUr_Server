@@ -18,7 +18,7 @@ export default function App()
             <ContentSection />
             <Waves isUpsideDown = {true} />
            
-            <section id="footerSection" class = "h-[30vh]">
+            <section id="footerSection" class = "h-[30vh] max-md:hidden">
                 
             </section>
             

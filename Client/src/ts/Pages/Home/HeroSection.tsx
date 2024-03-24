@@ -6,7 +6,7 @@ export default function Hero()
     return (
         <>
             <Navbar />
-            <section id="heroSection" class="min-h-[100vh] h-fit w-full align-top flex flex-col">
+            <section id="heroSection" class="min-h-[100vh] h-fit w-full align-top flex flex-col max-md:hidden">
                 
                 <div class=" mx-auto my-[10%] w-fit flex-col items-center justify-center select-none">
                     <h1 class="text-white font-[Jaldi] font-bold text-[4rem]">

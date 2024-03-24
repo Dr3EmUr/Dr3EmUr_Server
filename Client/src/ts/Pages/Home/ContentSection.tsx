@@ -8,7 +8,7 @@ export default function ()
 {
     return (
         <>
-            <section id="contentSection" class="  bg-white h-fit w-full px-56 py-20 content-section">
+            <section id="contentSection" class="  bg-white h-fit w-full max-lg:px-10 lg:px-56 py-20 content-section">
                 <AboutSection />
                 <ContentSection />
             </section>
@@ -80,8 +80,8 @@ function Service(props : {name : string, desc : string, imgName? : string})
 {
     return (
         <>
-            <div class="flex flex-row my-4">
-                <img src={props.imgName} alt={props.name} class = " aspect-square h-full"/>
+            <div class="flex max-lg:flex-col justify-center lg:flex-row my-4">
+                <img src={props.imgName} alt={props.name} class = " aspect-square h-full max-lg:w-[200px] block m-auto"/>
                 <div class="flex flex-col gap-3">
                     <h2 class = "text-center font-bold text-2xl">{props.name}</h2>
 
@@ -91,7 +91,7 @@ function Service(props : {name : string, desc : string, imgName? : string})
                             {props.desc}
                         </p>
                     </div>
-                    <div class = "flex flex-row justify-end">
+                    <div class = "flex flex-row max-lg:justify-center max-lg:mt-5 lg:justify-end">
                         <ServiceButton />
                     </div>
                     

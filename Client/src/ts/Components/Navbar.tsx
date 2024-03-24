@@ -2,8 +2,8 @@ export default function Navbar()
 {
     return (
         <>
-            <div class = "flex flex-col sticky top-0 bg-black z-10">
-                <nav class="px-7 py-4 flex gap-3 items-center text-white select-none">
+            <div class = "flex flex-col md:sticky top-0 bg-black z-10">
+                <nav class="px-7 py-4 flex flex-col md:flex-row gap-3 items-center text-white select-none">
                     <a href = "" class=" font-[Inika] font-bold text-2xl">Dr3EmUr's Server</a>
                     <NavbarElement text="Services" link="" />
                     <NavbarElement text="About me" link="" />
@@ -11,7 +11,7 @@ export default function Navbar()
                     <NavbarElement text="About this project" link = "" />
                 </nav>
 
-                <div class = "navbar-decorator"></div>
+                <div class = " max-md:small-navbar-decorator md:navbar-decorator"></div>
             </div>  
             
             
