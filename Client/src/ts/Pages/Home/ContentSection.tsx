@@ -21,7 +21,7 @@ function AboutSection()
 {
     return (
         <>
-            <h1 class=" text-4xl w-full text-center">About me</h1>
+            <h1 id = "About me" class=" text-4xl w-full text-center">About me</h1>
             <div class = "flex flex-row h-fit text-xl my-16">
                 <SideTextDeco />
                 <div class = "about-me">
@@ -53,7 +53,7 @@ function ContentSection()
 {
     return (
         <>
-            <div class="h-full bg-white">
+            <div id = "Services" class="h-full bg-white">
                 <h1 class=" text-4xl w-full text-center py-14">Services</h1>
 
                     <Service name="Pong"
