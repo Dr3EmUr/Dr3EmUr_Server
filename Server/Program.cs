@@ -41,9 +41,10 @@ internal class Program
         var app = builder.Build();
 
         app.UseHttpsRedirection();
-        app.MapDefaultControllerRoute();
-
         app.UseStaticFiles();
+        
+
+        
         app.Run();
     }
 }

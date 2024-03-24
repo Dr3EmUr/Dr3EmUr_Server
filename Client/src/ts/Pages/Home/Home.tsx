@@ -1,13 +1,11 @@
-import { SideTextDeco } from "./Components/CommonElements";
-import HeroSection from "./Pages/Home/HeroSection";
-import Navbar from "./Components/Navbar";
-import Waves from "./Components/Waves";
-import ContentSection from "./Pages/Home/ContentSection";
+import { SideTextDeco } from "../../Components/CommonElements";
+import HeroSection from "../Home/HeroSection";
+import Navbar from "../../Components/Navbar";
+import Waves from "../../Components/Waves";
+import ContentSection from "../../Pages/Home/ContentSection";
 
-export default function App()
+export default function Home()
 {
-    
-
     return (
         <>
             <div class="bg" />
