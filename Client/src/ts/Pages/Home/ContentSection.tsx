@@ -1,7 +1,7 @@
 //@ts-ignore
 import MidiSaver from "../../../images/MidiSaver.png"
 
-import { BlackVisualSeparator, SideTextDeco, WhiteVisualSeparator } from "../../Components/CommonElements";
+import { BlackVisualSeparator, ServiceButton, SideTextDeco, WhiteVisualSeparator } from "../../Components/CommonElements";
 
 
 export default function ()
@@ -54,7 +54,7 @@ function ContentSection()
     return (
         <>
             <div class="h-full bg-white">
-                <h1 class=" text-4xl w-full text-center py-16">Services</h1>
+                <h1 class=" text-4xl w-full text-center py-14">Services</h1>
 
                     <Service name="Pong"
                         desc = {"This is a really cool game I built in pure Javascript without the aid of any framework." +
@@ -81,18 +81,20 @@ function Service(props : {name : string, desc : string, imgName? : string})
     return (
         <>
             <div class="flex flex-row my-4">
-                <img src={props.imgName} alt={props.name} class = " aspect-square"/>
-                <div class="flex flex-col">
+                <img src={props.imgName} alt={props.name} class = " aspect-square h-full"/>
+                <div class="flex flex-col gap-3">
                     <h2 class = "text-center font-bold text-2xl">{props.name}</h2>
 
-                    <div class="flex flex-row h-auto">
+                    <div class="flex flex-row h-full font-light text-lg">
                         <SideTextDeco />
                         <p>
                             {props.desc}
                         </p>
                     </div>
+                    <div class = "flex flex-row justify-end">
+                        <ServiceButton />
+                    </div>
                     
-                    <button>Use Service</button>
 
                 </div>
                 

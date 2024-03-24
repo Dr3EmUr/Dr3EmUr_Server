@@ -10,6 +10,11 @@
 html
 {
     height : fit-content;
+    --azure: #1EA0FF;
+    --purple : #7000FF;
+    --dark-azure : #0076CC;
+    --dark-purple: #5400BE;
+    
 }
 
 body
@@ -102,4 +107,10 @@ body
 {
     border: 3px white solid;
     border-radius: 17px;
+}
+
+.text-border
+{
+    -webkit-text-stroke: 1.5px black;
+    font-size: 27px;
 }

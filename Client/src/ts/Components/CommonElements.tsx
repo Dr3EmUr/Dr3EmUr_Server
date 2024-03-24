@@ -52,3 +52,36 @@ export function SideTextDeco()
         </>
     )
 }
+
+export function ServiceButton()
+{
+    const buttonHeight = "40px"
+    const buttonWidth = "160px"
+
+    return (
+        <>
+            <div class = " h-fit w-fit flex flex-col">
+                <button
+                    style={`height: ${buttonHeight};
+                            width:  ${buttonWidth};`}
+                    class={ " bg-gradient-to-r from-[--azure] to-[--purple]" +
+                            " rounded-[12px] text-border z-[2] " +
+                            " text-white text-xl font-extrabold " + 
+                            " hover:translate-x-[1px] hover:translate-y-[1px] transition duration-75" + 
+                            " active:translate-x-[3.5px] active:translate-y-[2px]"}>
+                    Use Service
+                </button>
+
+                <div
+                    style={`height: ${buttonHeight};
+                            width:  ${buttonWidth};
+                            transform: translate(3.5px,-37px);`}
+                    class={" bg-gradient-to-r from-[--dark-azure] to-[--dark-purple]" +
+                                " rounded-[12px] text-border " +
+                                " text-white text-xl font-extrabold "}>
+                </div>
+            </div>
+            
+        </>
+    )
+}
