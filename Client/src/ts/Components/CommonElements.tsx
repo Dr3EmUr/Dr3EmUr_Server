@@ -53,7 +53,7 @@ export function SideTextDeco()
     )
 }
 
-export function ServiceButton()
+export function ServiceButton(props : {link : string})
 {
     const buttonHeight = "40px"
     const buttonWidth = "160px"
@@ -69,7 +69,7 @@ export function ServiceButton()
                             " text-white text-xl font-extrabold " + 
                             " hover:translate-x-[1px] hover:translate-y-[1px] transition duration-75" + 
                             " active:translate-x-[3.5px] active:translate-y-[2px]"}>
-                    Use Service
+                    <a href = {props.link}> Use Service </a>
                 </button>
 
                 <div

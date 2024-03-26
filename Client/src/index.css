@@ -53,7 +53,7 @@ body
 }
 
 .bg {
-    background-image: url("images/Night Sky.jpg");
+    background-image: embedurl("images/Night Sky.jpg");
     opacity: 30%;
     background-size: 30%;
 

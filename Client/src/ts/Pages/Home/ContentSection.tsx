@@ -1,6 +1,4 @@
-//@ts-ignore
-import MidiSaver from "../../../images/MidiSaver.png"
-
+import { Show } from "solid-js";
 import { BlackVisualSeparator, ServiceButton, SideTextDeco, WhiteVisualSeparator } from "../../Components/CommonElements";
 
 
@@ -53,21 +51,21 @@ function ContentSection()
 {
     return (
         <>
-            <div id = "Services" class="h-full bg-white">
+            <div id = "Services" class="h-full bg-white flex flex-col justify-around">
                 <h1 class=" text-4xl w-full text-center py-14">Services</h1>
 
                     <Service name="Pong"
                         desc = {"This is a really cool game I built in pure Javascript without the aid of any framework." +
-                        "To move, Press W and S as player 1 or Up and Down as player 2. The one that scores the most points wins!"}
-                    imgName={MidiSaver}
+                        "To move, Press W and S as player 1 or Up and Down as player 2. The one that scores the most points wins! (currently only works on PC)"}
+                        link = "/pong"
+                        imgName={"images/MidiSaver.png"}
                     />
                 
                     <BlackVisualSeparator />
                 
-                    <Service name="Pong"
-                        desc = {"This is a really cool game I built in pure Javascript without the aid of any framework." +
-                        "To move, Press W and S as player 1 or Up and Down as player 2. The one that scores the most points wins!"}
-                        imgName={MidiSaver}
+                    <Service name="Chat"
+                        desc = {"This is going to be a chat where you all wil be able to talk to each other. Currently a work in progress!"}
+                        
                     />
                 
                 <div class = "flex flex-row h-fit text-xl my-16"></div>
@@ -76,13 +74,18 @@ function ContentSection()
     )
 }
 
-function Service(props : {name : string, desc : string, imgName? : string})
+function Service(props: { name: string, desc: string, link?: string, imgName? : string})
 {
+    if (props.imgName == undefined)
+    {
+        props.imgName = "images/Default Image.jpg"
+    }
+
     return (
         <>
-            <div class="flex max-lg:flex-col justify-center lg:flex-row my-4">
-                <img src={props.imgName} alt={props.name} class = " aspect-square h-full max-lg:w-[200px] block m-auto"/>
-                <div class="flex flex-col gap-3">
+            <div class="flex max-lg:flex-col justify-items-start justify-start lg:flex-row my-4">
+                <img src={props.imgName} alt={props.name} class = " aspect-square max-lg:w-[200px] lg:w-[230px] m-auto"/>
+                <div class="flex flex-col gap-3 w-full">
                     <h2 class = "text-center font-bold text-2xl">{props.name}</h2>
 
                     <div class="flex flex-row h-full font-light text-lg">
@@ -91,9 +94,13 @@ function Service(props : {name : string, desc : string, imgName? : string})
                             {props.desc}
                         </p>
                     </div>
-                    <div class = "flex flex-row max-lg:justify-center max-lg:mt-5 lg:justify-end">
-                        <ServiceButton />
-                    </div>
+
+                    <Show when={props.link != null}>
+                        <div class = "flex flex-row max-lg:justify-center max-lg:mt-5 lg:justify-end">
+                            <ServiceButton link={props.link} />
+                        </div>
+                    </Show>
+                    
                     
 
                 </div>
