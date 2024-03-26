@@ -8,7 +8,7 @@ export default function Home()
 {
     return (
         <>
-            <div class="bg" />
+            <div style={"background-image: url('images/Night Sky.jpg');"} class="bg" />
 
             
             <HeroSection />

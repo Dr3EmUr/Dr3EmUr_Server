@@ -18,11 +18,29 @@ html
     
 }
 
-
 body
 {
-    height: 100%;
+    height: fit-content;
+    background-color: rgb(0,0,0,100%);
 }
+
+.bg {
+    opacity: 30%;
+    background-size: 30%;
+
+    background-repeat: repeat;
+    
+    position: fixed;
+
+    top:0;
+    left:0;
+
+    height:100%;
+    width: 100%;
+
+    z-index: -1;
+}
+
 
 .content-section h1, .content-section h2
 {
@@ -47,28 +65,6 @@ body
     max-width: 1000px;
 }
 
-body
-{
-    background-color: rgb(0,0,0,100%);
-}
-
-.bg {
-    background-image: embedurl("images/Night Sky.jpg");
-    opacity: 30%;
-    background-size: 30%;
-
-    background-repeat: repeat;
-    
-    position: absolute;
-
-    top:0;
-    left:0;
-
-    height: 100%;
-    width: 100%;
-
-    z-index: -1;
-}
 
 @responsive
 {

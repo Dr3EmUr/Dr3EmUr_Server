@@ -6,8 +6,8 @@ export default function Navbar()
                 <nav class="px-7 py-4 flex flex-col md:flex-row gap-3 items-center text-white select-none">
                     <a href = "" class=" font-[Inika] font-bold text-2xl">Dr3EmUr's Server</a>
                     <NavbarElement text="Services" link="#Services" />
-                    <NavbarElement text="About me" link="#About me" />
-                    <NavbarElement text="Contact me" link="#About me" />
+                    <NavbarElement text="About me" link="#AboutMe" />
+                    <NavbarElement text="Contact me" link="#AboutMe" />
                     {/*<NavbarElement text="About this project" link = "" />*/} {/*This was commented out because this is not coming in first deploy*/}
                 </nav>
 

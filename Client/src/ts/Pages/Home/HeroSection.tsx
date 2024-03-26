@@ -30,7 +30,7 @@ function ServicesButton()
     return (
         <>
             <div class="CTA-button services-button">
-                <a class=" w-full text-center" href = ".">Services</a>
+                <a class=" w-full text-center" href = "#Services">Services</a>
             </div>
         </>
     )
@@ -41,7 +41,7 @@ function AboutButton()
     return (
         <>
             <div class="CTA-button about-button">
-                <a class=" w-full text-center" href = ".">About</a>
+                <a class=" w-full text-center" href = "#AboutMe">About</a>
             </div>
         </>
     )
