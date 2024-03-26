@@ -1,6 +1,6 @@
 import { createEffect } from "solid-js"
 import pongLogic from "./Pong-Logic"
-//import "./pongStyles.css"
+import "./pongStyles.css"
 
 export default function ()
 {
