@@ -1,4 +1,5 @@
 using System.Net;
+using Microsoft.AspNetCore.Mvc;
 
 internal class Program
 {
@@ -42,9 +43,15 @@ internal class Program
 
         app.UseHttpsRedirection();
         app.UseStaticFiles();
-        
+        app.MapDefaultControllerRoute();
 
-        
+        app.MapFallback((ctx) =>
+        {
+            return Task.Run(async () =>
+            {
+                await ctx.Response.SendFileAsync("wwwroot/dist/index.html");
+            });
+        });
         app.Run();
     }
 }
