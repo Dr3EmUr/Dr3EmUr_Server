@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "dev": "parcel watch src/index.html --dist-dir ../Server/wwwroot/dist --public-url dist/",
-    "serve": "parcel src/index.html --dist-dir ../Server/wwwroot/dist --public-url /"
+    "serve": "parcel src/index.html --dist-dir ../Server/wwwroot/dist --public-url /",
+    "build": "parcel build src/index.html --dist-dir ../Server/wwwroot/dist --public-url dist/"
   },
   "keywords": [],
   "author": "",

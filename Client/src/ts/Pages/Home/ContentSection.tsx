@@ -20,9 +20,13 @@ function AboutSection()
     return (
         <>
             <h1 id = "AboutMe" class=" text-4xl w-full text-center">About me</h1>
-            <div class = "flex flex-row h-fit text-xl my-16">
-                <SideTextDeco />
-                <div class = "about-me">
+            <div class="flex flex-row h-fit text-xl my-16">
+
+                <span class = " max-sm:hidden">
+                    <SideTextDeco />
+                </span>
+                
+                <div class = "about-me w-full">
                     <h2 style={"margin-top:0;"}>Who am I?</h2>
                     <p>
                         Hi! I’m Dr3EmUr, and I’m and aspiring full stack web developer from Italy.
@@ -83,7 +87,7 @@ function Service(props: { name: string, desc: string, link?: string, imgName? : 
 
     return (
         <>
-            <div class="flex max-lg:flex-col justify-items-start justify-start lg:flex-row my-4">
+            <div class="flex flex-col max-lg:flex-col lg:flex-row justify-start my-4 h-full">
                 <img src={props.imgName} alt={props.name} class = " aspect-square max-lg:w-[200px] lg:w-[230px] m-auto"/>
                 <div class="flex flex-col gap-3 w-full">
                     <h2 class = "text-center font-bold text-2xl">{props.name}</h2>

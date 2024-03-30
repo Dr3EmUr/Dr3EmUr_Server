@@ -44,6 +44,9 @@ export function SideTextDeco()
             <div style={
                 `margin-right: 15px;
                 width: ${width};
+                height: auto;
+                min-height: 100%;
+                flex-shrink: 0;
                 background-image: linear-gradient(
                     to bottom, 
                         rgba(0,0,0,100%) 0%,

@@ -119,6 +119,7 @@ body
 
 .text-border
 {
-    -webkit-text-stroke: 1.5px black;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: black;
     font-size: 27px;
 }

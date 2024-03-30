@@ -22,11 +22,11 @@ internal class Program
 
         builder.WebHost.UseKestrel((options) =>
         {
-            options.Listen(IPAddress.Loopback, 443, listenerOptions =>
+            options.Listen(IPAddress.Any, 443, listenerOptions =>
             {
                 listenerOptions.UseHttps();
             });
-            options.Listen(IPAddress.Loopback, 80, listenerOptions =>
+            options.Listen(IPAddress.Any, 80, listenerOptions =>
             {
 
             });
