@@ -87,29 +87,38 @@ function Service(props: { name: string, desc: string, link?: string, imgName? : 
 
     return (
         <>
-            <div class="flex flex-col max-lg:flex-col lg:flex-row justify-start my-4 h-full">
-                <img src={props.imgName} alt={props.name} class = " aspect-square max-lg:w-[200px] lg:w-[230px] m-auto"/>
-                <div class="flex flex-col gap-3 w-full">
-                    <h2 class = "text-center font-bold text-2xl">{props.name}</h2>
+            
 
-                    <div class="flex flex-row h-full font-light text-lg">
+            <div class="flex flex-row h-full font-light text-lg">
+                        
+                        
+                <div class="flex 
+                    max-lg:flex-col l max-lg:items-center
+                    g:flex-row justify-start my-4 h-full">
+
+                    <img src={props.imgName} alt={props.name} class=" aspect-square 
+                        max-lg:w-[200px] max-lg:mb-8
+                        lg:w-[230px] lg:mr-8
+                        m-auto rounded-full " />
+            
+                    <div class="flex flex-col gap-3 w-full">
+                        <h2 class = "text-center font-bold text-2xl">{props.name}</h2>
+                    
+                        <div class = "flex flex-row">
                         <SideTextDeco />
                         <p>
                             {props.desc}
                         </p>
-                    </div>
-
-                    <Show when={props.link != null}>
-                        <div class = "flex flex-row max-lg:justify-center max-lg:mt-5 lg:justify-end">
-                            <ServiceButton link={props.link} />
                         </div>
-                    </Show>
-                    
-                    
 
+                        <Show when={props.link != null}>
+                            <div class = "flex flex-row max-lg:justify-center max-lg:mt-5 lg:justify-end">
+                                <ServiceButton link={props.link} />
+                            </div>
+                        </Show>                            
+                    </div>   
                 </div>
-                
-            </div>  
+            </div>    
         </>
     )
 }
