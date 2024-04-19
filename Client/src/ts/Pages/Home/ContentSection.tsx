@@ -62,17 +62,16 @@ function ContentSection()
                         desc = {"This is a really cool game I built in pure Javascript without the aid of any framework." +
                         "To move, Press W and S as player 1 or Up and Down as player 2. The one that scores the most points wins! (currently only works on PC)"}
                         link = "/pong"
-                        imgName={"images/MidiSaver.png"}
+                        imgName={"images/Pong.png"}
                     />
                 
                     <BlackVisualSeparator />
                 
                     <Service name="Chat"
                         desc = {"This is going to be a chat where you all wil be able to talk to each other. Currently a work in progress!"}
-                        
                     />
+                    
                 
-                <div class = "flex flex-row h-fit text-xl my-16"></div>
             </div>
         </>
     )
@@ -82,43 +81,45 @@ function Service(props: { name: string, desc: string, link?: string, imgName? : 
 {
     if (props.imgName == undefined)
     {
-        props.imgName = "images/Default Image.jpg"
+        props.imgName = "images/DefaultImage.svg"
     }
 
     return (
-        <>
-            
+        <>   
+            <div id = "ServiceItem" class="
+                max-lg:flex-col l max-lg:items-center
+                g:flex-row 
+                justify-start flex w-full h-fit
+                my-4 font-light text-lg">
 
-            <div class="flex flex-row h-full font-light text-lg">
-                        
-                        
-                <div class="flex 
-                    max-lg:flex-col l max-lg:items-center
-                    g:flex-row justify-start my-4 h-full">
-
-                    <img src={props.imgName} alt={props.name} class=" aspect-square 
-                        max-lg:w-[200px] max-lg:mb-8
-                        lg:w-[230px] lg:mr-8
-                        m-auto rounded-full " />
-            
-                    <div class="flex flex-col gap-3 w-full">
-                        <h2 class = "text-center font-bold text-2xl">{props.name}</h2>
-                    
-                        <div class = "flex flex-row">
+                <img src={props.imgName} alt={props.name} class=" 
+                    max-lg:w-[160px] max-lg:mb-8
+                    lg:w-[180px] lg:mr-8
+                    my-auto rounded-full object-cover aspect-square shrink-0" />
+        
+                <div class="flex flex-col gap-3 w-full">
+                    <h2 class = "text-center font-bold text-2xl">{props.name}</h2>
+                
+                    <div class = "flex flex-row min-h-[140px]">
                         <SideTextDeco />
                         <p>
                             {props.desc}
                         </p>
-                        </div>
+                    </div>
 
+                   
+                    <div class="
+                        flex flex-row 
+                        max-lg:justify-center max-lg:mt-5
+                        lg:justify-end
+                        min-h-[40px]">
                         <Show when={props.link != null}>
-                            <div class = "flex flex-row max-lg:justify-center max-lg:mt-5 lg:justify-end">
-                                <ServiceButton link={props.link} />
-                            </div>
-                        </Show>                            
-                    </div>   
-                </div>
-            </div>    
+                            <ServiceButton link={props.link} />
+                        </Show>                 
+                    </div>
+                               
+                </div>   
+            </div>
         </>
     )
 }
