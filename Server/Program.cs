@@ -41,6 +41,7 @@ internal class Program
 
         var app = builder.Build();
 
+        app.UseWebSockets();
         app.UseHttpsRedirection();
         app.UseStaticFiles();
         app.MapDefaultControllerRoute();
@@ -52,6 +53,7 @@ internal class Program
                 await ctx.Response.SendFileAsync("wwwroot/dist/index.html");
             });
         });
+
         app.Run();
     }
 }

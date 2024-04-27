@@ -2,7 +2,7 @@ import { createEffect } from "solid-js"
 import pongLogic from "./Pong-Logic"
 import "./pongStyles.css"
 
-export default function ()
+export default function Pong()
 {
     createEffect(() => {
         pongLogic()
