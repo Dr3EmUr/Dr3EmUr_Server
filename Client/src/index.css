@@ -27,6 +27,7 @@ body
 .bg {
     opacity: 30%;
     background-size: 30%;
+    background-image: url('/images/Night Sky.jpg');
 
     background-repeat: repeat;
     
