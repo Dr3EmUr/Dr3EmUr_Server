@@ -68,11 +68,11 @@ export function ServiceButton(props : {link : string})
                     style={`height: ${buttonHeight};
                             width:  ${buttonWidth};`}
                     class={ " bg-gradient-to-r from-[--azure] to-[--purple]" +
-                            " rounded-[12px] text-border z-[2] " +
+                            " rounded-[12px] z-[2] " +
                             " text-white text-xl font-extrabold " + 
                             " hover:translate-x-[1px] hover:translate-y-[1px] transition duration-75" + 
                             " active:translate-x-[3.5px] active:translate-y-[2px]"}>
-                    <a href = {props.link}> Use Service </a>
+                    <a class="text-border" href = {props.link}> Use Service </a>
                 </button>
 
                 <div

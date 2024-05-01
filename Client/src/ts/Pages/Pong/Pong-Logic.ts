@@ -10,8 +10,8 @@ export default function ()
     const playerWidth = 15;
     const ballSize = 20;
 
-    const playerSpeed = 7;
-    const ballSpeed = 8;
+    const playerSpeed = 3.5;
+    const ballSpeed = 4;
 
     // I really should have made this object oriented and separated things in different files but who cares lol this is just a demo project
     //-----------------------------------------------------------------------------------------------------------------------------------------------
