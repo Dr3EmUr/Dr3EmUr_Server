@@ -68,7 +68,8 @@ function ContentSection()
                     <BlackVisualSeparator />
                 
                     <Service name="Chat"
-                        desc = {"This is going to be a chat where you all wil be able to talk to each other. Currently a work in progress!"}
+                        desc={"This is going to be a chat where you all wil be able to talk to each other. Currently a work in progress!"}
+                        link = "/chat"
                     />
                     
                 

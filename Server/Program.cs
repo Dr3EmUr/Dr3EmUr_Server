@@ -37,14 +37,18 @@ internal class Program
         builder.Services.AddControllers();
         builder.Services.AddHttpsRedirection((options)=>{
             options.HttpsPort = 443;
-        });    
+        });
+
+        builder.Services.AddSingleton<WebSocketService>();
 
         var app = builder.Build();
 
-        app.UseWebSockets();
+        
         app.UseHttpsRedirection();
         app.UseStaticFiles();
         app.MapDefaultControllerRoute();
+
+        app.UseWebSockets();
 
         app.MapFallback((ctx) =>
         {
