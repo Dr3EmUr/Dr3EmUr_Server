@@ -42,13 +42,15 @@ internal class Program
         builder.Services.AddSingleton<WebSocketService>();
 
         var app = builder.Build();
-
         
+
         app.UseHttpsRedirection();
         app.UseStaticFiles();
         app.MapDefaultControllerRoute();
 
         app.UseWebSockets();
+
+        
 
         app.MapFallback((ctx) =>
         {
@@ -57,6 +59,8 @@ internal class Program
                 await ctx.Response.SendFileAsync("wwwroot/dist/index.html");
             });
         });
+
+        
 
         app.Run();
     }

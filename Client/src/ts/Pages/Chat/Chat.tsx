@@ -1,23 +1,27 @@
+import { effect } from "solid-js/web"
+
 export default function Chat()
 {
-    let socket = new WebSocket("/api/chat/connect")
-    socket.onopen = (e) => {
-        console.log("connection established")
-    }
+    effect(() => {
+        let socket = new WebSocket("wss://" + window.location.hostname + "/api/chat/connect")
+        socket.onopen = (e) => {
+            console.log("connection established")
+            socket.send("pong")
 
-    socket.onmessage = (e) => {
-        console.log(e.data)
-        socket.send("pong")
-    }
+            setInterval(() => {
+                socket.send("dummy data")
+            },500)
+        }
 
-    socket.onclose = (e) => {
-        console.log("connection closed!")
-        
-    }
+        socket.onmessage = (e) => {
+            console.log(e.data)
+        }
 
-    window.onbeforeunload = () => {
-        socket.close();
-    }
+        socket.onclose = (e) => {
+            console.log("connection closed!")
+            
+        }
+    })
 
     return (
         <>

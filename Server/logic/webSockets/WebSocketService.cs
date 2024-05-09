@@ -3,26 +3,49 @@ using System.Text;
 
 public class WebSocketService
 {
-    private List<WebSocket> webSockets = new List<WebSocket>();
-    public async Task addSocket(WebSocket socket)
+    //private List<WebSocket> webSockets = new List<WebSocket>();
+    public async Task handleSocketConnection(WebSocket socket)
     {
-        webSockets.Add(socket);
+        //webSockets.Add(socket);
 
-        await socket.SendAsync(Encoding.UTF8.GetBytes("ping"),WebSocketMessageType.Text,true,CancellationToken.None);
-        Console.WriteLine("Data sent");
+        Console.WriteLine("hello");
 
-        var buffer = WebSocket.CreateServerBuffer(1024);
-        WebSocketReceiveResult result;
+        await socket.SendAsync(Encoding.UTF8.GetBytes("Ping"),WebSocketMessageType.Text,false,CancellationToken.None);
 
-        do
+        var buffer = new byte[1024 * 4];
+
+        WebSocketReceiveResult result = await socket.ReceiveAsync(new ArraySegment<byte>(buffer),CancellationToken.None);
+
+        Console.WriteLine("message count:" + result.Count);
+        return;
+
+       /* await socket.SendAsync(Encoding.UTF8.GetBytes("ping"),WebSocketMessageType.Text,true,CancellationToken.None);
+        Console.WriteLine("Data sent");*/
+
+        while (!result.CloseStatus.HasValue)
         {
-            result = await socket.ReceiveAsync(buffer, CancellationToken.None);
-        } while (result.Count != 0);
+            Console.WriteLine(Encoding.UTF8.GetString(buffer));
+            
+            try
+            {
+                result = await socket.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
+                Console.WriteLine(Encoding.UTF8.GetString(buffer));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
 
-        
+            
+        }
 
-        await socket.CloseOutputAsync(WebSocketCloseStatus.NormalClosure,null,CancellationToken.None);
+       
 
-        webSockets.Remove(socket);
+
+        await socket.CloseAsync(result.CloseStatus.Value,
+        result.CloseStatusDescription,
+        CancellationToken.None);
+        //webSockets.Remove(socket);
     }
 }
